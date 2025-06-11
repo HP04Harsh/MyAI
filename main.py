@@ -1,6 +1,3 @@
-pip install fitz, docx2txt, tempfile
-
-
 import streamlit as st
 import fitz  # PyMuPDF
 import docx2txt
@@ -20,7 +17,7 @@ st.markdown("## 🤖 Predictive AI by Harsh")
 
 # --- Initialize ChatGroq ---
 llm = ChatGroq(
-    groq_api_key="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",  
+    groq_api_key=st.secrets["groq"]["api_key"],  
     model_name="Llama3-8b-8192",
     temperature=0.7
 )
